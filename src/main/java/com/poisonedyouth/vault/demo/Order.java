@@ -4,6 +4,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Random;
 
 @Entity
 @Table(name = "orders")
@@ -21,7 +22,8 @@ public class Order {
 	@CreationTimestamp
 	private Date orderDate;
 
-	public Order(String customerName, String productName, Date orderDate) {
+	public Order(long id, String customerName, String productName, Date orderDate) {
+		this.id = id;
 		this.customerName = customerName;
 		this.productName = productName;
 		this.orderDate = orderDate;
