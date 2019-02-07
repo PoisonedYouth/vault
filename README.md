@@ -24,6 +24,8 @@ Spring Vault:
 https://spring.io/blog/2016/06/24/managing-secrets-with-vault
 https://cloud.spring.io/spring-cloud-vault/
 
+Vault Java Driver:
+- https://github.com/BetterCloud/vault-java-driver
 
 
 Run "Vault Application"

@@ -1,5 +1,12 @@
 package com.poisonedyouth.vault.demo;
 
+import com.bettercloud.vault.Vault;
+import com.bettercloud.vault.VaultConfig;
+import com.bettercloud.vault.VaultException;
+import com.bettercloud.vault.response.LogicalResponse;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -9,6 +16,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.hamcrest.core.StringContains.containsString;
@@ -38,7 +46,5 @@ class OrderControllerTest {
 		Order order2 = new Order(1, "Trevor", "ProductB", new Date(123L));
 		return Arrays.asList(order1, order2);
 	}
-
-	//https://github.com/spring-projects/spring-vault/blob/master/spring-vault-core/src/test/java/org/springframework/vault/client/VaultClientsUnitTests.java
 
 }
